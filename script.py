@@ -12,7 +12,7 @@ def validar(valor_emprestimo, renda_mensal):
         return True
 
 def calcular(valor_emprestimo, prazo):
-    taxa = 0.04
+    taxa = 0.02
 
     prestacao = (valor_emprestimo * taxa)/(1 - (1+taxa)** -prazo)
     total = prestacao*prazo
@@ -33,9 +33,12 @@ def index():
 
         prestacao, taxa, total = calcular(valor_emprestimo, prazo)
 
-        return render_template('result.html', prestacao=prestacao, taxa=taxa,total=total)
+        return render_template('result.html', prestacao=prestacao, taxa=taxa,total=total, valor_emprestimo=valor_emprestimo)
     return render_template('index.html')
 
-if __name__ == '__main__':
+
+if __name__ == '__main__': 
     app.run(debug=True)
-    #teste de git 
+    
+
+

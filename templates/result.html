@@ -7,8 +7,13 @@
 </head>
 <body>
      <h1>Simulação Completa</h1>  
-     <p>Prestrações mensais: R$ {{prestacao}}</p> 
-     <p>Taxa de Juros: {{taxa}}%</p>
-     <p>Pagamento Total: R${{total}}</p>
+     <p>Valor do Emprestimo: R${{valor_emprestimo}}</p>
+     <p>Prestrações: R${{'{:.2f}'.format(prestacao)}} por {{prazo}} meses</p> 
+     <p>Taxa de Juros: {{'{:.2f}'.format(taxa*100)}}% a.m</p>
+     <p>Pagamento Total: R${{'{:.2f}'.format(total)}}</p>
+
+     <a href="{{ url_for('index') }}"> <!-- url_for cria URL associada à função index() definida no Flask(script.py)-->
+        <button>Voltar</button>
+     </a>
 </body>
 </html>
