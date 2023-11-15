@@ -3,19 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta  name="viewport" content="width=device-width, inicial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <title>Simulação de Emprestimo 🤑</title>
     </head>
     <body>
         <h1>Simulação de Emprestimo</h1>
         <form method="POST">
-            <label for="renda_mensal">Insira sua renda mensal:</label>
+            <label for="renda_mensal">Insira sua renda mensal:</label><br>
             <input type="number" name="renda_mensal" required><br>
-            <label for="valor_emprestimo">Insira qual será o valor do emprestimo:</label>
+            <label for="valor_emprestimo">Insira qual será o valor do emprestimo:</label><br>
             <input type="number" name="valor_emprestimo" required><br>
-            <label for="prazo">Insira o Prazo mesas para o pagamento das prestações:</label>
+            <label for="prazo">Insira o Prazo mesas para o pagamento das prestações:</label><br>
             <input type="number" name="prazo" required><br>
             
-            <button type="submit">Simular</button>
+           <br> <button class="back-button" type="submit">Simular</button>
         </form>
         {% if message %}
             <p>{{ message }}</p>

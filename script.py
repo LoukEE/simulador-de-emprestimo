@@ -36,7 +36,6 @@ def index():
         return render_template('result.html', prestacao=prestacao, taxa=taxa,total=total, valor_emprestimo=valor_emprestimo)
     return render_template('index.html')
 
-
 if __name__ == '__main__': 
     app.run(debug=True)
     
